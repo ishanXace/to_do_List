@@ -1,0 +1,188 @@
+:root {
+  --primary: #3498db;
+  --primary-hover: #2980b9;
+  --danger: #e74c3c;
+  --danger-hover: #c0392b;
+  --success: #2ecc71;
+  --success-hover: #27ae60;
+  --text: #2c3e50;
+  --light: #f9f9f9;
+  --white: #ffffff;
+  --gray: #bdc3c7;
+  --done: #7f8c8d;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --border-radius: 8px;
+  --transition: all 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-todo-app {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+}
+
+.custom-todo-app h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--gray);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.input-section input:focus {
+  border-color: var(--primary);
+}
+
+.input-section button {
+  padding: 0.75rem;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.input-section button:hover {
+  background: var(--primary-hover);
+}
+
+.error-message {
+  color: var(--danger);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.controls select {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--gray);
+  border-radius: var(--border-radius);
+  background: var(--white);
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: var(--transition);
+}
+
+.task-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li.done {
+  background: #f8f9fa;
+  color: var(--done);
+  text-decoration: line-through;
+}
+
+.task-list li input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  outline: none;
+  margin-right: 0.5rem;
+  transition: var(--transition);
+}
+
+.task-list li input[type="text"]:focus {
+  border-color: var(--primary);
+}
+
+.task-list li span {
+  flex: 1;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.task-list li button {
+  padding: 0.375rem 0.75rem;
+  background: var(--danger);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left: 0.5rem;
+}
+
+.task-list li button:hover {
+  background: var(--danger-hover);
+}
+
+.task-list li button:last-child {
+  margin-left: 0;
+}
+
+.task-list li button.save {
+  background: var(--success);
+}
+
+.task-list li button.save:hover {
+  background: var(--success-hover);
+}
+
+.task-list li button.cancel {
+  background: var(--gray);
+}
+
+.task-list li button.cancel:hover {
+  background: #95a5a6;
+}
