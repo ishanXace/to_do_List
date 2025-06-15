@@ -1,6 +1,6 @@
-# My Custom Todo App
+# My Own To-do-List App
 
-A responsive, modern todo application built with React. This app allows users to manage tasks with features such as adding, editing, deleting, marking as complete, and filtering or sorting tasks.
+A responsive, modern to-do application built with React. This app allows users to manage tasks with features such as adding, editing, deleting, marking as complete, and filtering or sorting tasks.
 
 ## Features
 
